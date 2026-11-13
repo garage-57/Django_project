@@ -16,6 +16,7 @@ files = [
 mypy = ["mypy (>=1.14.0)"]
 tests = ["packaging", "pytest", "pytest-asyncio"]
 
+
 [[package]]
 name = "django"
 version = "6.1.3"
