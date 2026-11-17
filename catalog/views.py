@@ -4,8 +4,10 @@ from django.http import HttpResponse
 def home(request):
     return render(request, 'catalog/home.html')
 
-
 def contacts(request):
+    return render(request, 'catalog/contacts.html')
+
+def contacts_answer(request):
     if request.method == "POST":
         name = request.POST.get("name")
         message = request.POST.get("message")
@@ -13,4 +15,6 @@ def contacts(request):
         return HttpResponse(f"Спасибо, {name}: Cooбщение получeно.")
     return render(request, 'catalog/contacts.html')
 
+def home_item(request, item_id):
+    return render(request, 'home.item.html', {'item_id': item_id})
 
